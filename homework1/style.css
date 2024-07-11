@@ -1,0 +1,23 @@
+.head-box { height: 50px;
+    background-color: rgb(227, 224, 224);}   
+
+.box1 { width: 150px;
+        height: auto;
+         background-color: bisque;
+         display: inline-block;
+        
+       }
+
+.box2 { width: 750px;
+        height: auto ;
+        background-color: white;
+        display: inline-block;;
+   }
+
+.box3 { width: 300px;
+        height: auto;
+        background-color: aquamarine;
+        display: inline-block;}
+
+.box-end { background-color: aquamarine;
+           margin-top: 0px;}
