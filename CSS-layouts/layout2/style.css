@@ -1,0 +1,27 @@
+.box-head { width: auto;
+            height: 80px;
+            background-color: rgb(217, 235, 229);}
+
+.con-box { display: inline-block;}
+
+.box1 { width: 1200px;
+        height: auto;
+        background-color: white;}
+
+.box2 { width: 1200px;
+        height: 40px;
+        border-top:2px solid grey ;
+        border-bottom:2px solid grey ;
+        background-color: rgb(217, 235, 229) ;}
+
+.box3 { width: 200px;
+        height: auto;
+    background-color:rgb(220, 239, 192);
+        display: inline-block;
+        border: 2px solid black;}
+
+.box-end { width: auto;
+           height: 30px;
+            background-color: rgb(124, 155, 124);
+            text-align: center;
+            margin: 10px;}

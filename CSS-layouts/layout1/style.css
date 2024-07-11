@@ -1,0 +1,34 @@
+.box-head { width: auto;
+            height: 80px;
+            background-color: rgb(210, 205, 205);}
+
+.box1 { width: 200px;
+        height: 400px;
+        background-color: beige;
+        display: inline-block;}
+
+.box2 { width: 305px;
+    height: 400px;
+    background-color: rgb(160, 177, 136);
+    display: inline-block; }
+
+.box3 { width: 305px;
+        height: 400px;
+        background-color: rgb(160, 177, 136);
+        display: inline-block; }
+
+.box4 { width: 305px;
+        height: 400px;
+        background-color: rgb(160, 177, 136);
+        display: inline-block; }
+
+
+.box5 { width: 305px;
+        height: 400px;
+        background-color: rgb(160, 177, 136);
+        display: inline-block; }
+
+.box-end { width: auto;
+           height: 40px;
+           background-color: rgb(160, 177, 136); }
+
