@@ -1,0 +1,97 @@
+.body{width: 280px;
+    height: 280px;
+    background-color: red;
+    clip-path: circle(42.9% at 47% 25%);
+    transform: translate(550px, 370px);
+    }
+
+  .bird div{ 
+    position: relative;
+animation-duration: 3s;
+animation-timing-function: ease-in-out;
+animation-iteration-count:infinite;}
+
+.head{width: 250px;
+height: 250px;
+background-color: black;
+clip-path: circle(24.1% at 50% 50%);
+animation-name: head-go;
+z-index: 9;}
+@keyframes head-go {
+    0% {left: 70px;
+    top: 30px;}
+    100% {left: 700px;
+    top: 10px;}
+}
+
+.eye {width: 50px;
+      height: 50px;
+    background-color: white;
+    transform: translate(110px,80px);
+    clip-path: circle(35% at 50% 50%);
+    }
+
+    .small {width: 50px;
+        height: 50px;
+      background-color: black;
+      transform: translateX(9px);
+      clip-path: circle(12% at 50% 50%);}
+
+
+.wing{width: 260px;
+    height: 220px;
+    background-color: gray;
+    clip-path: circle(42.9% at 49% 0);
+    animation-name: wing-go;
+   }
+   @keyframes wing-go {
+    0% {left: 380px;
+        top: -1250px;}
+     100% {left: 550px;
+        top: -943px;}
+   }
+
+
+.tail{width: 150px;
+    height: 150px;
+    background-color: black;
+    clip-path: polygon(91% 33%, 0 73%, 100% 67%);
+    animation-name: tail-go;
+    transform: translate(1100px,-510px);
+   } 
+   @keyframes tail-go {
+    from {right: 0px;
+    top: 0px;}
+    to {right: 650px;
+    top: -25px;}
+    
+   }
+
+.beak{width:300px;
+    height: 300px;
+    background-color: orange;
+    clip-path: ellipse(7% 4% at 50% 100%);
+    transform: translate(740px,-600px);
+    animation-name: beak-go;}
+
+    @keyframes beak-go {
+        from {right: 0px;
+        top: 0px;}
+        to {right: 2px;
+         top: -310px;} } 
+
+
+.foot{width: 330px;
+    height: 330px;
+    background-color: blue;
+    clip-path: polygon(19% 66%, 23% 83%, 25% 81%, 22% 68%, 27% 61%, 36% 78%, 24% 77%, 25% 81%, 36% 78%, 27% 61%);
+    transform: translate(620px,40px);
+    animation-name: foot-go;}
+
+    @keyframes foot-go {
+        from {right: 0px;
+            top: 0px;}
+            to {right: 0px;
+             top: -225px;}
+    }
+

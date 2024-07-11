@@ -1,0 +1,173 @@
+main {
+      width: 100%;
+      height: 100vh;
+      background-color: rgb(36, 2, 68);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.circle1,
+.circle3,
+.circle5,
+.circle7,
+.circle9,
+.circle2,
+.circle4,
+.circle6,
+.circle8 {
+      border: 2px solid bisque;
+      border-radius: 50%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation-name: go;
+      animation: 100%;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+}
+
+@keyframes go {
+      from {
+            rotate: 0deg;
+      }
+
+      to {
+            rotate: 360deg;
+      }
+}
+
+.circle1 {
+      width: 720px;
+      height: 720px;
+      animation-duration: 30s;
+}
+
+.circle2 {
+      width: 650px;
+      height: 650px;
+      animation-duration: 25s;
+}
+
+.circle3 {
+      width: 580px;
+      height: 580px;
+      animation-duration: 20s;
+}
+
+.circle4 {
+      width: 510px;
+      height: 510px;
+      animation-duration: 15s;
+}
+
+.circle5 {
+      width: 440px;
+      height: 440px;
+      animation-duration: 15s;
+}
+
+.circle6 {
+      width: 370px;
+      height: 370px;
+      animation-duration: 12s;
+}
+
+.circle7 {
+      width: 300px;
+      height: 300px;
+      animation-duration: 10s;
+}
+
+.circle8 {
+      width: 230px;
+      height: 230px;
+      animation-duration: 10s;
+}
+
+.circle9 {
+      width: 160px;
+      height: 160px;
+      animation-duration: 10s;
+}
+
+.sun {
+      width: 100px;
+      height: 14vh;
+      background-color: yellow;
+      clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+      transform: translateX(-410px);
+}
+
+
+
+.planet1,
+.planet2,
+.planet3,
+.planet4,
+.planet5,
+.planet6,
+.planet7,
+.planet8,
+.planet9 {
+      width: 180px;
+      height: 18vh;
+      clip-path: circle(12.9% at 50% 50%);
+      position: absolute;
+      z-index: 1;
+}
+
+
+.planet1 {
+      background-color: gray;
+      left: 55px;
+      bottom: 5px;
+}
+
+
+.planet2 {
+      background-color: aqua;
+      top: -65px;
+
+}
+
+.planet3 {
+      background-color: blue;
+      right: -40px;
+      top: 60px;
+}
+
+.planet4 {
+      background-color: yellow;
+      top: 100px;
+      left: -73px;
+}
+
+.planet5 {
+      background-color: bisque;
+      left: -90px;
+}
+
+.planet6 {
+      background-color: red;
+      bottom: 20px;
+      left: -60px;
+}
+
+.planet7 {
+      background-color: aquamarine;
+      top: -65px;
+      right: 100px;
+}
+
+.planet8 {
+      background-color: orangered;
+      top: 163px;
+}
+
+.planet9 {
+      background-color: grey;
+      bottom: -30px;
+      left: 55px;
+}
