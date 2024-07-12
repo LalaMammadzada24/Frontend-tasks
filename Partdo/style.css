@@ -1,0 +1,39 @@
+span:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+     /* remove the gap so it doesn't close  */
+   
+}
+
+header .firstbox span:hover{color: red;
+cursor: pointer;}
+
+header .firstbox a:hover{color: red;
+cursor: pointer;}
+
+@media (max-width:600px){header {display: none;}
+}
+@media (max-width:600px){.feature .d-flex span  {display: none;}
+}
+
+nav .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+     /* remove the gap so it doesn't close  */
+   
+}
+nav .dropdown-menu li:hover a{ background-color: rgb(250, 212, 218);
+    color: red;}
+
+.car{background-image:url('image/slider-01.jpg');
+    width: 100%;
+    height: 65vh;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;}
+
+.myinfo .nav-item:hover {text-decoration: underline;}
+
+footer .d-flex span:hover{text-decoration: underline;
+cursor: pointer;}
