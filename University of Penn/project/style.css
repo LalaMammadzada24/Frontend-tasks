@@ -1,0 +1,963 @@
+/* ==============================First Section=============================================== */
+/* span taginin icindeki metne uygun decorationlar verilib */
+.first .d-flex a span {
+    color: #011F5B;
+    font-size: 28px;
+    font-family: "EB Garamond", serif;
+    font-weight: 400;
+    text-decoration: underline;
+    padding-top: 37px;
+}
+
+/* text decorationa underline vermisem, ustune gelende xettin getmesi ucun, hoverle text decoration none verilir */
+.first .d-flex a span:hover {
+    text-decoration: none;
+}
+
+.first {
+    background-color: #82AFD3;
+}
+
+/* media responsivliyi yeni diger cihazlara uygunlasmagi ucun verilir */
+@media only screen and (max-width: 600px) {
+    .first .d-flex a span {
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .first .d-flex a span {
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .first .d-flex a span {
+        margin-left: 50px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .first .d-flex a span {
+        margin-left: 110px;
+    }
+}
+
+/* ==========================Hero Section ============================================================================= */
+
+/* umumi sectiona background image verilir ve sayta gore uygunlasdirilir */
+.hero {
+    background-image:  linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.7)
+      ),url('../image/hero\'s\ picture\ bg.jpg');
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+/* penn yazilan sekil */
+.hero img {
+    width: 200px;
+    margin: 8px;
+}
+
+.hero .nav-up ul .nav-link {
+    font-size: 13px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+.hero .nav-up .dropdown-menu {
+    border-radius: 0;
+    font-size: 14px;
+    border: 5px solid rgb(198, 198, 198);
+    padding-top: 0;
+}
+/* xetten yuxaridaki hissedeki dropdown menudaki a tag lainin uzerine gelende reng deyismesi ucun hover verilir */
+.hero .nav-up .dropdown-menu li:hover a {
+    color: #b50505;
+    background-color: white;
+}
+/* xettin ustundeki give to penn buttonunun dizayni */
+.hero button {
+    background-color: #b50505;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+    border-radius: 0;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    padding: 20px;
+    margin-left: 4px;
+}
+
+/* buttona hover olanda rengi deyismesi ucun hover verilir */
+.hero button:hover {
+    background-color: #990000;
+    color: white;
+}
+
+/* asagidaki kod navin icindeki menulara click etdikde deyilde, sadece cursor uzerine gelende submenular acilsin deye yazilir */
+nav .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+/* cursoru navdaki menulara getirdikde border-bottom olmasi ucun hover verilir */
+nav .nav-item:hover .nav-link {
+    color: white;
+    border-radius: 0%;
+    border-bottom: 5px solid orange;
+}
+
+nav .nav-item .nav-link {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    color: white;
+    font-weight: bolder;
+    font-size: 14px;
+}
+/* menularin arasindaki slashlar ucun dizayn */
+nav .slash {
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 5px;
+    margin-right: 12px;
+}
+/* nav daki menularin submunsundaki a lar ucun dizayn */
+nav .dropdown-menu .dropdown-item{
+    font-weight: 400;
+    border-bottom: 1px solid rgb(199, 197, 197);
+    padding: 10px 40px 10px 7px;
+    color: #000;
+}
+
+nav .dropdown-menu .dropdown-item:hover{
+    color:#990000;
+    background-color: white;
+}
+
+nav .dropdown-menu .d-flex div{
+    padding: 30px;
+}
+
+/* position absolute  relative olandan referans alandir, bununla submenu ya meselen left 0 versek, submenu saga teref acilar */
+nav .dropdown-menu {
+    border-radius: 0;
+    position: absolute;
+    border-top: 7px solid gainsboro;
+    border-bottom: 7px solid gainsboro;
+}
+
+.hero .textbox h1 {
+    font-family: EB Garamond, serif;
+    font-size: 45px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* textbox div ine position absolute vermekle onu lazim olan hisseye yerlesdiririk  */
+.hero .textbox {
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    width: 800px;
+}
+
+.hero .textbox h6{
+    letter-spacing: 2px; /* herfler arasindaki mesafe */
+}
+
+
+.hero .textbox .line {
+    background: #FFF;
+    opacity: .2;
+    width: 4.5%;
+    height: 4px;
+}
+
+/* textbox un icindeki a tagindeki metnler gorunmur, yalniz cursor uzerine geldikde gorunur buna gore opacity 0 veririk 
+daha sonra ise hover le opacity 1 veririk */
+.hero .textbox a {
+    text-decoration: none;
+    opacity: 0;
+}
+
+.textbox:hover a {
+    opacity: 1;
+    transition-delay: 0.4s;
+}
+
+/*cursoru textbox-un uzerine getirdikde bu div yuxari qalxir */
+.hero .textbox:hover {
+    transform: translateY(-97px); /*textbox-un y oxuna gore yerlesmesi */
+    transition-timing-function: ease-in-out; /*hereketin novu */
+    transition-duration: 0.25s; /* bas verdiyi muddet */
+    transition-delay: 0.2s; /*gecikmesi yeni cursoru uzerine getirdikde 0.2 san sonra hereket edecek*/
+}
+
+
+/* =======================================Third Section================================================ */
+.third{
+    margin-top: 80px;
+    margin-bottom: 90px;
+}
+.third h2 {
+    font-family: "EB Garamond", serif;
+    color: #011F5B;
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.line {
+    background: #011F5B;
+    opacity: .4;
+    width: 39px;
+    height: 4px;
+}
+
+.third .nav .nav-link {
+    color: #011F5B;;
+    font-family: "EB Garamond", serif;
+    font-size: 18px;
+    margin-right: 15px;
+    border-bottom: 1px solid #DFDFDF;
+    padding: 0 0 10px;
+}
+
+.third .nav .nav-link i{
+    font-size: 13px;
+    margin-left: 120px;
+}
+
+.third .dropdown-menu .dropdown-item{
+    color: #000;
+    font-family: "Roboto",Helvetica,Arial,sans-serif;
+}
+
+.third .dropdown-menu .dropdown-item:hover{
+text-decoration: underline;
+color: #990000;
+background-color: white;
+}
+
+.third .dropdown-menu {
+    border-radius: 0; /*cercivenin kenarlari daire olmasin deye radius 0 olur*/
+    border: 4px solid rgb(192, 189, 189); /*cercivenin qalinligi novu ve rengi*/
+}
+
+.third .box2 {
+    width: 100%;
+    display: flex;
+    justify-content: center; /*box daki metnin merkeze gelmesi ucun*/
+    align-items: center;
+    flex-wrap: wrap; /*qutular ekrana yerlesmedikde alt-alta gorunmesi ucun*/
+    border-right: 1px solid rgb(214, 211, 211);
+    border-left: 1px solid rgb(214, 211, 211);
+    padding-left: 22px;
+    padding-right: 20px;
+}
+
+.third .box {
+    width: 50%;
+    height: 50%;
+}
+
+
+.third .card {
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.third .card-title {
+    color: #990000;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    letter-spacing: 1.6px;
+    font-size: 12px;
+    font-weight: 550;
+    text-align: center;
+}
+
+.bigletter {
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.third .card-text {
+    color: #011F5B;
+    text-align: center;
+    font-family: "EB Garamond", serif;
+    font-weight: 150;
+}
+
+
+.third .cardline {
+    position: absolute;
+    width: 20px;
+    height: 5px;
+    background-color: rgba(1, 31, 91, 0.2);
+    left: 50%;
+}
+
+.third .card:hover .card-text {
+    text-decoration: underline;
+}
+
+.third .card .flow {
+    overflow: hidden; /*seklin oldugu classa overflow hidden verilirki, sekil boyuyen zaman o divden kenara cixmasin*/
+}
+
+/*cursoru carda getiren zaman sekil boyuyur*/
+.third .card:hover img {
+    transform: scale(1.03); /*sekli 1.03 defe boyudur*/
+    transition-timing-function: linear;
+    transition-duration: 0.3s;
+}
+
+.third .more a {
+    color: #990000;
+    font-size: 12px;
+    letter-spacing: 1.6px;
+    text-decoration: none;
+    font-weight: bolder;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+
+}
+
+.third .more a:hover {
+    text-decoration: underline;
+}
+
+
+.card-title:hover {
+    text-decoration: underline;
+}
+
+
+/*=============================Fourth Section====================================================*/
+.fourth {
+    background-image: url('../image/covid-vials.jpg'); /*arxa-fon sekli*/
+    width: 100%;
+    height: 748px;
+}
+
+.fourth .healthybox {
+    background-color: #011F5B;
+    width: 56%;
+    height: 570px;
+    margin-top: 92px;
+    left: 62%;
+    padding: 11px;
+}
+
+.fourth .bluebox {
+    background-color: #011F5B;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.fourth .line {
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    opacity: 0.2;
+    position: absolute;
+    left: 48%;
+}
+
+.bluebox h6 {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 550;
+    letter-spacing: 1.5px;
+    margin-top: 60px;
+}
+
+
+.bluebox h1 {
+    font-family: EB Garamond, serif;
+    font-size: 32px;
+    margin-top: 24px;
+    margin-bottom: 17px;
+    line-height: 38px; /*setirler arasindaki mesafe*/
+}
+
+.bluebox h5 {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    margin: 54px 80px 50px;
+    line-height: 28px;
+}
+
+.fourth button {
+    background-color: #011F5B;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 25px 60px;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    margin-left: 175px;
+    margin-bottom: 38px;
+
+}
+
+
+.healthybox:hover h1 {
+    text-decoration: underline;
+}
+
+.healthybox:hover button {
+    color: #990000;
+    background-color: white;
+}
+
+
+/*=====================================Fifth section=========================================================================*/
+.fifth{
+    margin-top: 90px;
+}
+
+.fifth .row {
+    margin-top: 40px;
+}
+
+.fifth h1 {
+    font-family: "EB Garamond", serif;
+    color: #011F5B;
+    font-weight: 400;
+    font-size: 47px;
+}
+
+
+.fifth .card .red-box {
+    display: inline-block; /*inlene block olduqda div butun setri tutmur, hundurluk ve en vermek olur*/
+    width: max-content;
+    background-color: #990000;
+    color: white;
+    letter-spacing: 0.4px;
+    font-weight: bolder;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    padding: 3px 15px;
+}
+
+.fifth .white-box {
+    display: inline-block;
+    width: 100%;
+    height: 48px;
+    font-family: "EB Garamond", serif;
+    font-size: 28px;
+    color: #011F5B;
+    padding: 1px auto;
+    background-color: white;
+}
+
+.fifth .month-box {
+    position: absolute;
+    top: 20px;
+    left: 80%;
+}
+
+.fifth .card {
+    position: relative;
+    width: 94%;
+    box-sizing: border-box;
+}
+
+.fifth .card {
+    background-image: linear-gradient(360deg, #FFFFFF 0%, #F2F2F3 100%);
+}
+
+.fifth .card .card-title {
+    font-family: "EB Garamond", serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #011F5B;
+    text-decoration: none;
+}
+
+.fifth .card .card-title:hover {
+    text-decoration: underline;
+}
+
+.fifth .card p {
+    font-size: 17px;
+    color: rgba(1, 31, 91, 0.68);
+    line-height: 1.4;
+}
+
+.fifth .card span {
+    font-weight: 500;
+    font-size: 12px;
+    color: #000F3A;
+    letter-spacing: 1.6px;
+    margin-top: 59px;
+}
+
+.fifth .card .line {
+    width: 20px;
+}
+
+.fifth .for {
+    background-color: rgb(253, 249, 252);
+    width: 74%;
+    height: 8.6%;
+    font-weight: 500;
+    font-size: 12px;
+    color: #000F3A;
+    padding-top: 27px;
+    letter-spacing: 1.6px;
+    position: absolute;
+    bottom: 37%;
+}
+
+.fifth .card {
+    overflow: hidden;
+}
+
+.fifth img:hover {
+    transform: scale(1.03);
+    transition-timing-function: linear;
+    transition-duration: 0.3s;
+}
+
+.fifth .card-title:hover {
+    text-decoration: underline;
+}
+
+.fifth .more2 {
+    display: flex;
+    align-items: start; /*mentler en solda yazilmasi ucun*/
+    font-size: 12px;
+    letter-spacing: 1.6px;
+    font-weight: 500;
+}
+
+.fifth .more2 a {
+    color: #011F5B;
+    text-decoration: none;
+}
+
+.fifth .more2 a:hover {
+    text-decoration: underline;
+}
+
+/*==========================================Feature Section=====================================================*/
+.feature .col {
+    width: 620px;
+}
+
+
+.feature img {
+    width: 56.2%;
+}
+
+.feature .line {
+    width: 20px;
+    height: 3px;
+}
+
+.feature p {
+    margin: 17px 50px 49px;
+    line-height: 1.6;
+    font-size: 17px;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+
+.feature button {
+    width: 210px;
+    font-size: 12px;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    background: none;
+    border: 1px solid rgba(118, 118, 118, 0.2);
+    padding: 23px;
+    margin-left: 125px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.feature .button1 {
+    color: #011F5B;
+}
+
+
+.feature .button2 {
+    color: white;
+}
+
+
+.feature .button1:hover {
+    background-color: #011F5B;
+    color: white;
+}
+
+.feature .card:hover {
+    box-shadow: 10px 5px 15px rgb(228, 227, 227); /*qutuya yanlardan kolge vermek ucun*/
+}
+
+
+.feature .button2:hover {
+    background-color: white;
+    color: #990000;
+}
+
+/*==========================================Slide-bg Section=====================================================*/
+
+.slide-bg{
+    background-image: url('../image/bg-img-lines.png');
+    width: 100%;
+    height: 99vh;
+    padding-top: 140px;
+}
+
+.slide-bg h1{
+    font-family: "EB Garamond",serif;
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.slide-bg .line{
+    background-color: white;
+    opacity: .4;
+    width: 40px;
+    height: 4px;
+}
+
+.slide-bg p{
+    max-width: 640px;
+    font-weight: 400;
+    font-family: "Roboto",Helvetica,Arial,sans-serif;
+    font-size: 17px;
+    text-align: center;
+    line-height: 1.7;
+    margin-top: 17px;
+    padding: 0 20px;
+}
+
+/* ============================================================Slide Section================================================= */
+
+.slide{
+    transform: translateY(-168px);
+}
+
+.slide .carousel-item img{
+    width: 820px;
+    margin-left: 370px;
+    position: relative;
+}
+
+.slide span{
+    border-radius:  50%;
+    padding: 27px;
+    border: 2px solid rgba(153, 151, 151,0.8);
+}
+
+.slide .carousel-item{
+    overflow: hidden; /*sekil boyuyende qutudan kenara cixmamasi ucun*/
+}
+
+.slide .carousel-item:hover img {
+    transform: scale(1.03); /* sekili boyutmek ucun*/
+    transition-timing-function: linear;
+    transition-duration: 0.1s;
+}
+
+.slide .slide-text h3{
+    font-weight: 400;
+    font-size: 22px;
+    font-family: "EB Garamond",serif;
+    color: #011F5B;
+    padding: 24px 20px 20px 40px;
+}
+
+
+.slide .slide-text{
+    position: absolute;
+    bottom: 0;
+    left: 23%;
+    background-color: white;
+}
+
+.slide .slide-text i{
+    color: white;
+}
+
+.slide .slide-text button{
+    background-color:#990000;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide .carousel-item:hover button{
+    background-color: #810000 ;
+}
+
+/*===========================================Feature-two Section=====================================================================*/
+.feature-two{
+    margin-top: -198px;
+}
+
+.feature-two h1 {
+    font-family: "EB Garamond", serif;
+    color: #011F5B;
+    font-size: 47px;
+    font-weight: 400;
+}
+
+.feature-two .card1 {
+    background-image: url('../image/flower.png');
+    width: 408px;
+    height: 409px;
+    background-size: cover;
+}
+
+.feature-two .card1-body,
+.card3-body {
+    background: rgba(153, 0, 0, 0.8);
+    width: 408px;
+    height: 409px;
+    transition: opacity 0.25s ease;
+    opacity: 0;
+}
+
+.feature-two .card1-body:hover {
+    opacity: 1;
+}
+
+.feature-two .card1 i,
+.card3-body i {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 16px;
+    letter-spacing: 0;
+    margin-right: 5px;
+}
+
+.feature-two .card1 h6,
+.card3-body h6 {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+
+.feature-two .card2 {
+    background-color: #011F5B;
+    width: 408px;
+    height: 409px;
+}
+
+.feature-two .card2 i {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 16px;
+    letter-spacing: 0;
+    margin-right: 5px;
+}
+
+
+.feature-two .card2 h6 {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.feature-two .card2 p,
+.card3-body p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-left: 29px;
+    margin-right: 30px;
+}
+
+.feature-two .card3 {
+    background-image: url('../image/penncard3.png');
+    width: 408px;
+    height: 409px;
+    background-size: cover;
+}
+
+
+.feature-two .card3-body:hover {
+    opacity: 1;
+}
+
+.feature-two .card1 i {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 16px;
+    letter-spacing: 0;
+    margin-right: 5px;
+}
+
+.feature-two .card1 h6 {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.icon i {
+    color: #011F5B;
+    padding: 15px;
+    border: 2px solid rgba(197, 200, 209, 0.5);
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+/* ===========================================================Seventh Section===================================================================== */
+.seventh {
+    background-color: #011F5B;
+}
+
+.seventh h2 {
+    font-size: 28px;
+    font-family: "EB Garamond", serif;
+    margin: 18px;
+}
+
+.seventh p {
+    font-weight: 400;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    margin: 12px 107px 32px;
+    line-height: 30px;
+}
+
+.seventh button {
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: none;
+    font-size: 12px;
+    letter-spacing: 1.8px;
+    font-weight: 700;
+    padding: 25px;
+}
+
+.seventh button:hover {
+    color: #011F5B;
+    background-color: white;
+}
+
+/* ======================================================Footer=================================================================================== */
+footer {
+    background-color: #011F5B;
+    background-image: url(https://www.upenn.edu/themes/custom/penn_global/assets/img//footer-16.png);
+    color: white;
+    background-repeat: no-repeat; /*arxa fondaki sekilin tekrarlanmasi ucun*/
+    background-size: cover;
+}
+
+footer img {
+    width: 200px;
+    margin-bottom: 26px;
+}
+
+footer .info {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    margin-bottom: 9.6px;
+}
+
+footer .info a {
+    color: #82AFD3;
+    text-decoration: none;
+}
+
+
+footer .nav-item {
+    font-weight: 500;
+    letter-spacing: 2.17px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    margin-bottom: 22px;
+}
+
+footer h5 {
+    font-family: "EB Garamond", serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+footer i {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+
+
+footer a {
+    text-decoration: none;
+}
+/* a taglarindeki sozlere hover olanda altdan xett olmasi ucun */
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .line {
+    background: #FFF;
+    opacity: .2;
+    width: 18px;
+    height: 4px;
+    margin-bottom: 18px;
+}
+
+footer .row {
+    margin-left: 36px;
+    margin-top: 100px;
+}
+
+footer button {
+    color: white;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 24px 53px;
+    font-size: 12px;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    border-radius: 32px;
+    letter-spacing: 1.8px;
+    margin-top: 24px;
+}
+
+footer button:hover {
+    background-color: #FFF;
+    color: #011F5B;
+}
+
+footer .d-flex .nav-link {
+    font-size: 12px;
+    border-right: 1px solid rgb(113, 113, 113);
+    padding: 1.5px 20px 0;
+    margin-bottom: 16px;
+}
+
+footer .fa-solid {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 70px;
+    height: 70px;
+    padding: 28px;
+    margin: 63px 10px 0px 57px;
+}
+
+footer span {
+    font-size: 12px;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+footer .d-flex ul {
+    margin: 60px 0 -10px -30px;
+}
